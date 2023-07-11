@@ -1,0 +1,103 @@
+/* Ключевые кадры анимации */
+@keyframes fade-in-el {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up-el {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down-el {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left-el {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right-el {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Стили анимации */
+// .animate-animate-1 {
+//   animation: fade-in-el 1s ease-out forwards;
+// }
+.animate-animate-1 {
+  animation-name: fade-in-el;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+// .animate-animate-2 {
+//   animation: slide-up-el 1s ease-out forwards;
+// }
+.animate-animate-2 {
+  animation-name: slide-up-el;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+// .animate-animate-3 {
+//   animation: slide-down-el 1s ease-out forwards;
+// }
+.animate-animate-3 {
+  animation-name: slide-down-el;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+// .animate-animate-4 {
+//   animation: slide-left-el 1s ease-out forwards;
+// }
+.animate-animate-4 {
+  animation-name: slide-left-el;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+// .animate-animate-5 {
+//   animation: slide-right-el 1s ease-out forwards;
+// }
+.animate-animate-5 {
+  animation-name: slide-right-el;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+/* Стили инициализации */
+.init-animate-1,
+.init-animate-2,
+.init-animate-3,
+.init-animate-4,
+.init-animate-5 {
+  opacity: 0;
+}
