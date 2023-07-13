@@ -7,6 +7,7 @@ window.animateElements = function () {
       if (entry.isIntersecting) {
         let animateClass;
         let duration = target.getAttribute("data-time") || "1s"; // get the animation duration
+        let delay = target.getAttribute("data-delay") || "0s"; // get the animation delay
 
         if (target.classList.contains("init-animate-1")) {
           animateClass = "animate-animate-1";
@@ -21,9 +22,10 @@ window.animateElements = function () {
         }
 
         if (animateClass) {
+          target.classList.remove("not-animated");
           target.style.animationDuration = duration;
+          target.style.animationDelay = delay;
           target.classList.add(animateClass);
-          target.style.opacity = "1";
         }
       }
     });
@@ -41,11 +43,15 @@ window.animateElements = function () {
   );
 
   elements.forEach((element) => {
-    element.style.opacity = "0";
+    element.classList.add("not-animated");
     observer.observe(element);
   });
 };
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
+//   window.animateElements();
+// });
+// element-animation.js
+window.onload = function () {
   window.animateElements();
-});
+};
